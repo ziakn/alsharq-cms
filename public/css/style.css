@@ -1,0 +1,49 @@
+html,body{
+    height: 100%;
+    min-height: 100%;
+    background: #1565c0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #1565c0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #1565c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form-rounded {
+    border-radius: 0px;
+    border-width: 0px;
+    padding-left: 20px;;
+    }
+
+.sub{
+    width:250px; 
+    align-items: center;
+    
+    border-width: 2px;
+    border-radius: 0px;
+    background-color: #1565c0;
+    color: white;
+    
+}
+
+.sub:hover{
+    background-color: whitesmoke;
+    color: #1565c0;
+    box-shadow: 0px 10px #888888;
+    font-weight: bold;
+    border: 2px solid #1565c0;
+}
+
+
+.roundd{
+    border-radius: 10px;
+}
+
+.chkbox{
+    padding-left: 28px;;
+}
+
+.logo{
+    padding-left: 85px;
+}
+
+.pt{
+    padding-top: 150px;
+}
