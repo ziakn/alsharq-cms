@@ -108,9 +108,7 @@
             {{ item.category.name }}
             </template>
             	<template v-slot:item.body="{ item }">
-                <p>{{item.body|safe }}</p>
-                 <ckeditor :value="item.body" :config="editorConfig" :read-only="true" ></ckeditor>
-							{{item.body && item.body.length>70?item.body.slice(0,68)+'...':item.body}}
+                <p  v-html="item.body  && item.body.length>70?item.body.slice(0,68)+'...':item.body"></p>
 				</template>
            <template v-slot:item.status="{ item }">
             <v-switch v-model="item.status" @change="changeStatus(item)" color="primary" inset></v-switch>

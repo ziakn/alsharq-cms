@@ -4458,8 +4458,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -47799,26 +47797,15 @@ var render = function() {
                         fn: function(ref) {
                           var item = ref.item
                           return [
-                            _c("p", [
-                              _vm._v(_vm._s(_vm._f("safe")(item.body)))
-                            ]),
-                            _vm._v(" "),
-                            _c("ckeditor", {
-                              attrs: {
-                                value: item.body,
-                                config: _vm.editorConfig,
-                                "read-only": true
-                              }
-                            }),
-                            _vm._v(
-                              "\n\t\t\t\t\t\t\t" +
-                                _vm._s(
+                            _c("p", {
+                              domProps: {
+                                innerHTML: _vm._s(
                                   item.body && item.body.length > 70
                                     ? item.body.slice(0, 68) + "..."
                                     : item.body
-                                ) +
-                                "\n\t\t\t\t"
-                            )
+                                )
+                              }
+                            })
                           ]
                         }
                       },
