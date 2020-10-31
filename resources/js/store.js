@@ -6,7 +6,6 @@ const store = new Vuex.Store({
         counter: 100,
         type: null,
         authUser: window.authUser,
-        authPrivilige: window.authPrivilige,
         setting: window.setting,
         load: false,
         token: localStorage.getItem("token") || null,

@@ -56355,7 +56355,6 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
     counter: 100,
     type: null,
     authUser: window.authUser,
-    authPrivilige: window.authPrivilige,
     setting: window.setting,
     load: false,
     token: localStorage.getItem("token") || null,
