@@ -122,12 +122,12 @@
             </template>
           </v-data-table>
           <div class="text-center">
-                                <v-pagination
-                                v-model="filters.page"
-                                :length="pageCount"
-                                @input="getPages"
-                                ></v-pagination>
-                            </div>
+                  <v-pagination
+                    v-model="filters.page"
+                    :length="pageCount"
+                    @input="getPages"
+                    ></v-pagination>
+            </div>
         </v-col>
       </v-row>
       <DeleteModal :trigger="isDelete" :title="deleteTitle" :body="deleteBody" @request="remove"></DeleteModal>
@@ -213,16 +213,12 @@ export default {
       status: 1,
       category_id:"",
     },
-
     dataSort:[
-
       { text: "Sort By New Data", value: "Sort By New Data" },
       { text: "Sort By Old Data", value: "Sort By Old Data" },
       { text: "Sort By Title ASC", value: "Sort By Title ASC" },
       { text: "Sort By Title DESC", value: "Sort By Title DESC" },
     ],
-
-  
     filters:
         {
 			page: 1,
@@ -322,9 +318,9 @@ getbySort()
 					 params: this.filters
 				});
 				this.dataList = data.data;
-                this.itemsPerPage=data.per_page;
-                this.pageCount=data.last_page;
-                this.filters.page=data.current_page
+        this.itemsPerPage=data.per_page;
+        this.pageCount=data.last_page;
+        this.filters.page=data.current_page
 				
 			} 
 			catch (e) 
@@ -456,22 +452,28 @@ async changeStatus(i)
         }
       }
     },
-    async remove() {
+    async remove() 
+    {
       this.loading = true;
       try {
         let { data } = await axios({
           method: "delete",
           url: "/app/pages/" + this.dataList[this.dataIndex].id,
         });
-        if (data.status) {
+        if (data.status) 
+        {
           this.snacks("Successfully Done", "green");
           this.dataList.splice(this.dataIndex, 1);
           this.close();
-        } else {
+        } 
+        else 
+        {
           this.snacks(data.data, "red");
           this.loading = false;
         }
-      } catch (e) {
+      } 
+      catch (e) 
+      {
         this.snacks("Operation Failed", "red");
         this.loading = false;
       }

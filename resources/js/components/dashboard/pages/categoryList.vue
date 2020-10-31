@@ -370,22 +370,28 @@ export default {
         }
       }
     },
-    async remove() {
+    async remove() 
+    {
       this.loading = true;
-      try {
+      try 
+      {
         let { data } = await axios({
           method: "delete",
           url: "/app/category/" + this.dataList[this.dataIndex].id,
         });
-        if (data.status) {
+        if (data.status) 
+        {
           this.snacks("Successfully Done", "green");
           this.dataList.splice(this.dataIndex, 1);
           this.close();
-        } else {
+        } 
+        else 
+        {
           this.snacks(data.data, "red");
           this.loading = false;
         }
-      } catch (e) {
+      } catch (e) 
+      {
         this.snacks("Operation Failed", "red");
         this.loading = false;
       }
