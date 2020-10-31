@@ -11,8 +11,8 @@ This README would normally document whatever steps are necessary to get your app
 
 * The Alsharq Admin App 
 * install repositry link 
-* download node module in your system
-* download Composer in your system
+* download  node module in your system
+* download and install Composer in your system
 * open terminal and go to Alsharq Admin App folder or simply open VSCODE Terminal
 * npm install
 * cp.env.example .env
