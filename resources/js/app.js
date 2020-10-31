@@ -13,24 +13,6 @@ require('es6-promise').polyfill();
 import CKEditor from 'ckeditor4-vue';
 Vue.use( CKEditor );
 
-// let userType = window.authUser.authPrivilige
-// router.beforeEach((to, from, next) => {
-
-//     var flag=0;
-//     if(to.meta){
-//         let allowed = to.meta.type
-//         for(let a of allowed){
-//             if(a==userType){                
-//                 flag=1;
-//             }
-//         }
-//     }
-//     if(flag==1)
-//     next();
-//     else
-//     return;
-  
-//   });
 
 router.afterEach((to, from) => {
     Vue.nextTick(() => {

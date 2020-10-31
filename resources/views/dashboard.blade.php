@@ -36,7 +36,7 @@
             };
             @if(Auth::check())
                 window.authUser={!! Auth::user() !!}
-                window.authPrivilige={!! Auth::user()->privilige !!}
+              
                 @else
                 window.authUser=false
                 @endif

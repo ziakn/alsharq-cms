@@ -19,6 +19,7 @@ This README would normally document whatever steps are necessary to get your app
 * composer update
 * php artisan key:generate
 * setup database setting in env file
+* php artisan migrate:refresh --seed
 * remove the old storage file from public folder
 * php artisan storage:link
 * php artisan serve

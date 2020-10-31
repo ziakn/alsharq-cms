@@ -54472,23 +54472,7 @@ __webpack_require__(/*! es6-object-assign */ "./node_modules/es6-object-assign/i
 __webpack_require__(/*! es6-promise */ "./node_modules/es6-promise/dist/es6-promise.js").polyfill();
 
 
-Vue.use(ckeditor4_vue__WEBPACK_IMPORTED_MODULE_2___default.a); // let userType = window.authUser.authPrivilige
-// router.beforeEach((to, from, next) => {
-//     var flag=0;
-//     if(to.meta){
-//         let allowed = to.meta.type
-//         for(let a of allowed){
-//             if(a==userType){                
-//                 flag=1;
-//             }
-//         }
-//     }
-//     if(flag==1)
-//     next();
-//     else
-//     return;
-//   });
-
+Vue.use(ckeditor4_vue__WEBPACK_IMPORTED_MODULE_2___default.a);
 _router__WEBPACK_IMPORTED_MODULE_3__["default"].afterEach(function (to, from) {
   Vue.nextTick(function () {
     document.title = to.meta.title ? to.meta.title : 'Al-Sharq';
