@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2020 at 12:29 PM
+-- Generation Time: Nov 01, 2020 at 06:46 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -38,14 +38,6 @@ CREATE TABLE `categories` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `categories`
---
-
-INSERT INTO `categories` (`id`, `user_id`, `name`, `image`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 'category', '/storage/uploads/files/fkUxlsjFYF1fQs5EP38QriecPEbKpwczc5RBTaFl.png', 'asdasdadfzdfdz', 1, '2020-10-29 14:10:14', '2020-10-29 14:12:03'),
-(3, 1, 'category 2', '/storage/uploads/files/fkUxlsjFYF1fQs5EP38QriecPEbKpwczc5RBTaFl.png', 'asd', 1, '2020-10-29 15:14:39', '2020-10-29 15:14:39');
-
 -- --------------------------------------------------------
 
 --
@@ -78,14 +70,6 @@ CREATE TABLE `images` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `images`
---
-
-INSERT INTO `images` (`id`, `user_id`, `image_folder_id`, `name`, `src`, `type`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '1.PNG', '/storage/uploads/files/fkUxlsjFYF1fQs5EP38QriecPEbKpwczc5RBTaFl.png', '', 1, '2020-10-29 14:10:05', '2020-10-29 14:10:05'),
-(2, 1, 1, '7.PNG', '/storage/uploads/files/QRC8lB4OOx6LTUOMkqAJ4g7zstu89v9Q37OnVoeg.png', '', 1, '2020-10-29 14:49:35', '2020-10-29 14:49:35');
 
 -- --------------------------------------------------------
 
@@ -122,15 +106,15 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2020_10_29_152238_create_user_types_table', 1),
-(5, '2020_10_29_152547_create_images_table', 1),
-(6, '2020_10_29_152635_create_image_folders_table', 2),
-(7, '2020_10_29_180600_create_categories_table', 3),
-(8, '2020_10_29_181234_create_pages_table', 4),
-(9, '2020_10_30_162649_create_priviliges_table', 5);
+(82, '2014_10_12_000000_create_users_table', 1),
+(83, '2014_10_12_100000_create_password_resets_table', 1),
+(84, '2019_08_19_000000_create_failed_jobs_table', 1),
+(85, '2020_10_29_152238_create_user_types_table', 1),
+(86, '2020_10_29_152547_create_images_table', 1),
+(87, '2020_10_29_152635_create_image_folders_table', 1),
+(88, '2020_10_29_180600_create_categories_table', 1),
+(89, '2020_10_29_181234_create_pages_table', 1),
+(90, '2020_10_30_162649_create_priviliges_table', 1);
 
 -- --------------------------------------------------------
 
@@ -149,14 +133,6 @@ CREATE TABLE `pages` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pages`
---
-
-INSERT INTO `pages` (`id`, `user_id`, `category_id`, `title`, `body`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(4, 1, 3, 'asd', '<ol>\n	<li>asdasd<img alt=\"\" src=\"asdasd\" /></li>\n</ol>', '/storage/uploads/files/QRC8lB4OOx6LTUOMkqAJ4g7zstu89v9Q37OnVoeg.png', 1, '2020-10-30 12:02:38', '2020-10-30 12:22:14'),
-(5, 1, 1, 'asd', '<p><s>asdasdas</s>asdasdasd</p>', '/storage/uploads/files/QRC8lB4OOx6LTUOMkqAJ4g7zstu89v9Q37OnVoeg.png', 1, '2020-10-30 12:08:39', '2020-10-30 12:08:39');
 
 -- --------------------------------------------------------
 
@@ -190,9 +166,8 @@ CREATE TABLE `priviliges` (
 --
 
 INSERT INTO `priviliges` (`id`, `user_id`, `pages`, `setting`, `created_at`, `updated_at`) VALUES
-(2, 4, 0, 0, '2020-10-30 13:42:24', '2020-10-30 13:42:24'),
-(3, 5, 1, 1, '2020-10-30 13:45:26', '2020-10-30 15:38:27'),
-(6, 1, 1, 1, '2020-10-30 13:47:28', '2020-10-30 14:18:22');
+(1, 1, 1, 1, NULL, NULL),
+(2, 2, 0, 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -221,9 +196,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `mobile`, `address`, `email_verified_at`, `password`, `image`, `type`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@alsharq.com', '123123', 'doha', NULL, '$2y$10$l0rZycNv0upeQOY/xA069OXEjwfdRVLhVWRKIEyqH/QSqTRHEXb7C', '/storage/uploads/avatar/Ftzg0lWWvT7WAQiZJXkhL4m01motT8ooQ3Wqq2Xa.png', 1, 1, NULL, NULL, '2020-10-29 13:52:55'),
-(4, 'test', 'test@gmail.com', '123123123', 'asdasdasd', NULL, '$2y$10$ybSbEooAHmaY0DvaaM2ww.0Dz1ipq6I.g2YoDEp4iP12Gg8FjOc7.', '/profile.png', 2, 1, NULL, '2020-10-30 13:42:24', '2020-10-30 13:42:24'),
-(5, 'scasd', 'SDas@GMAIL.COM', 'ziakn03@gmail.com', NULL, NULL, '$2y$10$HCJqq.0VpN8z6eEBcUskAu0i38SxiVLJj2zq9akR4DWIn6S.4S3FO', '/profile.png', 2, 1, NULL, '2020-10-30 13:45:26', '2020-10-30 13:45:26');
+(1, 'Mohamed Mosaed ', 'mosaed@alsharq.com', '12345678', 'Doha Qatar', NULL, '$2y$10$/G51lBF7s.ibXSnSEX0d3OHfUJOwehhuHWTdy24aw9gKIHRu5gTn.', '/profile.png', 1, 1, NULL, NULL, NULL),
+(2, 'moderator', 'moderator@alsharq.com', '12345678', 'Doha Qatar', NULL, '$2y$10$l8O64JRqLlKRfJvaXNxIKOuV9FxgKPVHQ4LQEDvbS.516tN3WBZem', '/profile.png', 2, 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -246,7 +220,7 @@ CREATE TABLE `user_types` (
 
 INSERT INTO `user_types` (`id`, `user_id`, `name`, `status`, `created_at`, `updated_at`) VALUES
 (1, 1, 'Admin', 1, NULL, NULL),
-(2, 1, 'ModerateR', 1, '2020-10-29 12:51:19', '2020-10-29 12:51:38');
+(2, 1, 'Moderator', 1, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -328,7 +302,7 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -340,7 +314,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `image_folders`
@@ -352,25 +326,25 @@ ALTER TABLE `image_folders`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `priviliges`
 --
 ALTER TABLE `priviliges`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_types`

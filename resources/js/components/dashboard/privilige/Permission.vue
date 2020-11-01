@@ -104,8 +104,8 @@ data: () => ({
     dataType:{},
     editedItem:
     {
-      pages: 0,
-      setting:0,
+      pages: false,
+      setting:false,
       user_id:0,
     }
       
